@@ -4,8 +4,6 @@ import Vuex from "vuex";
 import * as Types from "@/types";
 Vue.use(Vuex);
 
-import Notification from "./modules/Notification";
-
 import {
   getCharacters,
   getCharactersByName,
@@ -14,9 +12,6 @@ import {
 } from "@/services/modules/characters";
 
 export default new Vuex.Store<Types.State>({
-  modules: {
-    Notification,
-  },
   state: {
     selectedCharacter: {
       id: 0,

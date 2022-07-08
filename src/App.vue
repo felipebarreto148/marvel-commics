@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <notification />
     <default-header />
     <section class="app__content">
       <transition name="fade" mode="out-in">
@@ -16,7 +15,6 @@ import { defineComponent } from "@vue/composition-api";
 export default defineComponent({
   components: {
     DefaultHeader: () => import("@/components/Header/Header.vue"),
-    Notification: () => import("@/components/Notification/Notification.vue"),
   },
 });
 </script>
