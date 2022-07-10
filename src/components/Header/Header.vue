@@ -37,7 +37,7 @@ export default defineComponent({
 	padding: 0 5%;
 	transition: 500ms;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
 	  max-height: 180px;
     flex-direction: column;
 	  padding: 2%;
