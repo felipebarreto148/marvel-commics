@@ -8,7 +8,7 @@
 				$route.path != '/' && $route.path != '/home' ? $router.push('/') : {}
 			"
 		/>
-		<searcher placeholder="Pesquise pelo nome de um personagem." />
+		<searcher placeholder="Pesquise pelo nome de um personagem." v-if="$route.name == 'Home'"/>
 	</header>
 </template>
 
