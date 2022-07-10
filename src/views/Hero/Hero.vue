@@ -14,33 +14,35 @@
 			</template>
 
 			<template v-slot:content>
-				<section class="hero__card__infos">
-					<img :src="renderImage(hero.thumbnail)" alt="" />
-					<section>
-						<h2 class="hero__card__infos__title">{{ hero.name }}</h2>
-						<p class="hero__card__infos__description">
-							{{ hasDescription(hero) }}
-						</p>
+				<section>
+					<section class="hero__card__infos">
+						<img :src="renderImage(hero.thumbnail)" alt="" />
+						<section>
+							<h2 class="hero__card__infos__title">{{ hero.name }}</h2>
+							<p class="hero__card__infos__description">
+								{{ hasDescription(hero) }}
+							</p>
+						</section>
 					</section>
-				</section>
-				<section class="hero__card__comics">
-					<h2>Comics</h2>
-					<section class="hero__card__comics__infos">
-						<default-card
-							class="hero__card__comics__infos__card"
-							v-for="(item, index) in comics"
-							:key="index"
-							max-width="280"
-							@click="() => goRead(item)"
-							:clicked="true"
-						>
-							<template v-slot:content>
-								<section class="hero__card__comics__infos__content">
-									<img :src="renderImage(item.thumbnail)" loading="lazy" />
-									<h4>{{ item.title }}</h4>
-								</section>
-							</template>
-						</default-card>
+					<section class="hero__card__comics">
+						<h2>Comics</h2>
+						<section class="hero__card__comics__infos">
+							<default-card
+								class="hero__card__comics__infos__card"
+								v-for="(item, index) in comics"
+								:key="index"
+								max-width="280"
+								@click="() => goRead(item)"
+								:clicked="true"
+							>
+								<template v-slot:content>
+									<section class="hero__card__comics__infos__content">
+										<img :src="renderImage(item.thumbnail)" loading="lazy" />
+										<h4>{{ item.title }}</h4>
+									</section>
+								</template>
+							</default-card>
+						</section>
 					</section>
 				</section>
 			</template>
@@ -176,6 +178,10 @@ export default defineComponent({
 				column-gap: 20px;
 				row-gap: 20px;
 				padding: 10px;
+
+				@media (max-width: 768px) {
+					grid-template-columns: repeat(1, 1fr);
+				}
 
         &__content {
           font: 500 17px "Poppins", sans-serif;
