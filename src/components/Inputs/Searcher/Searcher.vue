@@ -7,9 +7,6 @@
       v-model="state.valueToSearch"
       @input="() => searchCharacter()"
     />
-    <button class="searcher__button" @click="() => searchCharacter()">
-      <span class="mdi mdi-magnify" />
-    </button>
   </section>
 </template>
 
@@ -57,13 +54,18 @@ export default defineComponent({
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  
+  @media (max-width: 768px) {
+    margin: 0 10px;
+    justify-content: center;
+  }
 
   &__field {
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     line-height: 30px;
-    font: 500 25px "Poppins", sans-serif;
+    font: 500 20px "Poppins", sans-serif;
     transition: 200ms;
     border-radius: 5px;
     padding: 5px;
@@ -73,33 +75,6 @@ export default defineComponent({
 
     &:focus {
       border: 2px solid $primary;
-    }
-
-    @media (max-width: 600px) {
-      max-width: 500px;
-    }
-  }
-
-  &__button {
-    width: 30px;
-    height: 30px;
-    padding: 0 10px;
-    color: white;
-    background: transparent;
-    border: none;
-    outline: none;
-
-    cursor: pointer;
-    transition: 200ms;
-
-    &:hover {
-      transform: scale3d(1.2, 1.2, 1.2);
-    }
-
-    & span {
-      width: 100%;
-      height: 100%;
-      font-size: 30px;
     }
   }
 }
