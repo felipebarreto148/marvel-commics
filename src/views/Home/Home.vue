@@ -16,13 +16,10 @@
         </template>
       </default-card>
     </section>
-    <v-btn
-      @click="() => init()"
-      class="justify-center"
-      :loading="state.isLoading"
-      v-if="characters.length"
-      >Carregar mais</v-btn
-    >
+
+    <base-button v-if="characters.length" @clicked="() => init()" :loading="state.isLoading">
+      Carregar mais
+    </base-button>
   </section>
 </template>
 
@@ -34,6 +31,7 @@ export default defineComponent({
   components: {
     DefaultCard: () => import("@/components/Card/Card.vue"),
     Searcher: () => import("@/components/Inputs/Searcher/Searcher.vue"),
+    BaseButton: () => import("@/components/Buttons/Button/Button.vue"),
   },
   setup(_, { root }) {
     const $store = root.$store;
@@ -70,6 +68,7 @@ export default defineComponent({
   flex-direction: column;
   padding: 10px;
   row-gap: 20px;
+  align-items: center;
 
   &__searcher {
     height: 100%;
