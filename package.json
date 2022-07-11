@@ -5,9 +5,7 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint",
-		"unit": "jest",
-		"unit:dev": "jest --no-cache --watch-all"
+		"lint": "vue-cli-service lint"
 	},
 	"dependencies": {
 		"@babel/preset-typescript": "^7.16.7",
@@ -25,7 +23,6 @@
 	"devDependencies": {
 		"@babel/core": "^7.18.6",
 		"@babel/preset-env": "^7.18.6",
-		"@types/jest": "^28.1.4",
 		"@typescript-eslint/eslint-plugin": "^4.18.0",
 		"@typescript-eslint/parser": "^4.18.0",
 		"@vue/cli-plugin-babel": "~4.5.15",
@@ -33,14 +30,11 @@
 		"@vue/cli-plugin-pwa": "~4.5.15",
 		"@vue/cli-plugin-router": "~4.5.15",
 		"@vue/cli-plugin-typescript": "~4.5.15",
-		"@vue/cli-plugin-unit-jest": "~4.5.15",
 		"@vue/cli-plugin-vuex": "~4.5.15",
 		"@vue/cli-service": "~4.5.15",
 		"@vue/eslint-config-prettier": "^6.0.0",
 		"@vue/eslint-config-typescript": "^7.0.0",
-		"@vue/test-utils": "^2.0.2",
 		"babel-core": "^7.0.0-bridge.0",
-		"babel-jest": "^28.1.2",
 		"babel-loader": "^8.2.5",
 		"deepmerge": "^4.2.2",
 		"eslint": "^6.7.2",
@@ -50,9 +44,7 @@
 		"prettier": "^2.2.1",
 		"sass": "~1.32",
 		"sass-loader": "^10",
-		"ts-jest": "^28.0.5",
 		"typescript": "~3.9.3",
-		"vue-jest": "^3.0.7",
 		"vue-template-compiler": "^2.6.11",
 		"webpack": "^5.73.0"
 	}
