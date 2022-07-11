@@ -124,8 +124,8 @@ export default defineComponent({
 			padding: 10px 10px 10px 0;
 
 			& img {
-				max-height: 700px;
-				max-width: 700px;
+				max-height: 500px;
+				max-width: 500px;
 				border-radius: 0 10px 10px 0;
 			}
 
